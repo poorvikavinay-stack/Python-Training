@@ -1,0 +1,119 @@
+{
+  "metadata": {
+    "kernelspec": {
+      "name": "python",
+      "display_name": "Python (Pyodide)",
+      "language": "python"
+    },
+    "language_info": {
+      "codemirror_mode": {
+        "name": "python",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.8"
+    }
+  },
+  "nbformat_minor": 5,
+  "nbformat": 4,
+  "cells": [
+    {
+      "id": "5da3e735-0328-4618-b907-22bd12b88a88",
+      "cell_type": "code",
+      "source": "\ndef calculate_total (marks_list):\n    total = sum (marks_list)\n    return total\n\n#sample list\nmarks = [78,84,88,91,72]\n#function call\nprint(\"total marks:\", calculate_total (marks))\n",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "total marks: 413\n"
+        }
+      ],
+      "execution_count": 6
+    },
+    {
+      "id": "773fda25-9cb6-4b1b-86b1-fbfb8601a575",
+      "cell_type": "markdown",
+      "source": "function with condition ",
+      "metadata": {}
+    },
+    {
+      "id": "be817024-fd41-4e44-bc48-8554e1303b1d",
+      "cell_type": "code",
+      "source": "def grade_student(score):\n    if score >=80:\n       return \"A\"\n    elif score >= 75:\n        return \"B\"\n    elif score >= 60:\n        return \"c\"\n    else :\n        return \"F\"\n\n# function calls\nprint(\"score 90 grade:\", grade_student(90))\nprint(\" score 85 grade:\", grade_student(85))\nprint(\"score 50 grade:\", grade_student(50))\n    ",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "score 90 grade: A\n score 85 grade: A\nscore 50 grade: F\n"
+        }
+      ],
+      "execution_count": 7
+    },
+    {
+      "id": "c9d4cfff-1037-4068-a1e7-b00b18a8fc1f",
+      "cell_type": "markdown",
+      "source": "Try-except for division",
+      "metadata": {}
+    },
+    {
+      "id": "fb17f247-f8bd-498b-852b-382abd4b3c9a",
+      "cell_type": "code",
+      "source": "\ndef safe_divide(a, b):\n    try:\n        result = a / b\n        return result\n    \n    except ZeroDivisionError:\n        return \"Error: Division by zero is not allowed.\"\n    \n    except TypeError:\n        return \"Error: Invalid input type.\"\n\n# Function calls\nprint(safe_divide(10, 2))\nprint(safe_divide(10, 0))\nprint(safe_divide(10, \"a\"))",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "5.0\nError: Division by zero is not allowed.\nError: Invalid input type.\n"
+        }
+      ],
+      "execution_count": 8
+    },
+    {
+      "id": "0153a8c9-6a72-409d-9545-c4ed3a5a36f7",
+      "cell_type": "markdown",
+      "source": "Try -except with user dictionary lookup",
+      "metadata": {}
+    },
+    {
+      "id": "5c728c99-6376-450b-aae0-042d0c1f12b0",
+      "cell_type": "code",
+      "source": "student_marks = {\n    \"Riya\": 85,\n    \"Kriya\": 92,\n    \"priya\": 76\n}\n\ndef get_marks(name):\n    try:\n        print(name, \"marks:\", student_marks[name])\n    \n    except KeyError:\n        print(\"Student not found in the record.\")\n\n# Function calls\nget_marks(\"Riya\")\nget_marks(\"kriya\")",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "Riya marks: 85\nStudent not found in the record.\n"
+        }
+      ],
+      "execution_count": 10
+    },
+    {
+      "id": "fdf15e19-c2a9-43ee-b315-b5122b46cc65",
+      "cell_type": "markdown",
+      "source": "1. Why do we create custom functions in Python?\nCustom functions are created to make the code reusable, organized, and easier to understand. They help avoid repetition and improve program efficiency.\n\n2. What is the purpose of try-except?\nThe purpose of try-except is to handle errors in a program without stopping its execution. It makes the program more user-friendly and stable.\n\n\n3. Name one error that can be handled using exception handling.\nOne error that can be handled using exception handling is ZeroDivisionError.",
+      "metadata": {}
+    },
+    {
+      "id": "8dea2b3a-df90-4dd2-ba11-0774c8a17715",
+      "cell_type": "markdown",
+      "source": "Conclusion \nFrom this assignment, I learned how to create custom functions in Python to make programs more organized and reusable. I also understood how try-except blocks help in handling errors effectively and prevent programs from crashing.",
+      "metadata": {}
+    }
+  ]
+}
